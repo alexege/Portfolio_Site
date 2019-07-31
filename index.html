@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+    <script src="static/portfolio_app/js/script.js"></script>  
+    <title>Alexander Ege</title>
+
+</head>
+<body>
+
+    <!-- FullScreen Background -->
+    <!-- <div class="fullscreen-bg">
+        <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+            <source src="video/big_buck_bunny.webm" type="video/webm">
+            <source src="images/ink.mp4" type="video/mp4">
+            <source src="video/big_buck_bunny.ogv" type="video/ogg">
+        </video>
+    </div> -->
+
+
+    <img class="name_logo" src="images\10.png" alt="">
+    <div class="header"></div>
+    <!-- <div class="details">Alexander@Ege.com | (530) 276-4648 | Orange County, CA.</div> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand" href="#">Alexander Ege</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Slick Notes</a>
+                    <a class="dropdown-item" href="#">Ege Efficiency Interface</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Work</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Education</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Resume</a>
+            </li>
+            </ul>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Full Stack Developer</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About -->
+    <div class="about-page page">
+        <h1>About</h1>
+        <img class="headshot" src="images/headshot.png" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, voluptatum debitis! Ducimus repellendus architecto eum dolore voluptatem, vitae ex incidunt aliquam quam porro aliquid! Enim fugit facilis quia non qui?</p>
+    </div>
+    
+    <!-- Projects -->
+    <div class="projects-page page">
+
+        <!-- <div style="width: 50%; border: 1px solid white;height: 450px;"></div> -->
+
+        <div>
+            <h1>Projects</h1>
+        </div>
+
+        <div class="Web Fundamentals project"></div>
+        <div class="Python project"></div>
+        <div class="JavaScript project"></div>
+        <div class="C# project"></div>
+
+
+        <div class="description-box">
+                <h1>Selection</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium impedit et itaque vitae culpa suscipit! Quisquam delectus eligendi voluptatem soluta.</p>
+            </div>
+    
+        <div class="description-box-python" style="display: none;">
+                <h1>Python</h1>
+                <h3>Flask</h3>
+                <p>We spent two weeks learning the basics of MySQL using Flask.</p>
+                <h3>Django</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, tempore?</p>
+                <h3>MySQL</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, autem.</p>
+        </div>
+    
+        <div class="description-box-mean" style="display: none;">
+                <h1>Mean</h1>
+                <h3>MongoDB</h3>
+                <h3>Express</h3>
+                <h3>Angular</h3>
+                <h3>Node.js</h3>
+        </div>
+    
+        <div class="description-box-webfunds" style="display: none;">
+                <h1>Web Fundamentals</h1>
+                <h3>HTML</h3>
+                <h3>CSS</h3>
+                <h3>JavaScript</h3>
+        </div>
+
+        
+        <!-- Hex boxes -->
+        <div class="center-hex">
+        <div class="hex hex-box">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/coding_dojo_logo_white.png" x="10" y="10" width="44" height="44" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img1)"/>
+            </svg>
+        </div>
+        </div>
+
+        <div class="hex hex-box-2" name="webfunds">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/Python_Sticker2.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img2)"/>
+            </svg>
+        </div>
+
+        <div class="hex hex-box-3" name="mean">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img3" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img3)"/>
+            </svg>
+        </div>
+
+        <div class="hex hex-box-4" name="python">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img4)"/>
+            </svg>
+        </div>
+
+        <div class="hex hex-box-5" name="python">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img5" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img5)"/>
+            </svg>
+        </div>
+
+        <div class="hex hex-box-6" name="mean">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img6" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img6)"/>
+            </svg>
+        </div>
+
+        <div class="hex hex-box-7" name="mean">
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img7" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />                  
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img7)"/>
+            </svg>
+        </div>
+
+        
+
+        <!-- <div class="hex hex-box-4">
+                <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image xlink:href="http://www.pngall.com/wp-content/uploads/2016/05/Python-Logo-PNG-Image.png" x="15" y="15" width="70" height="70" />
+                        </pattern>
+                    </defs>
+                    <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img4)"/>
+                    <text id="text" font-size="10" x="50" y="50" text-anchor="middle">Python</text>
+                </svg>
+            </div>
+
+        <div class="hex hex-box-3">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs >
+                    <pattern id="img3" patternUnits="userSpaceOnUse" width="100" height="100" >
+                    <image xlink:href="https://upload.wikimedia.org/wikipedia/commons/b/b1/Meanstack-624x250.jpg" x="15" y="15" width="70" height="70" />
+
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img3)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">M.E.A.N</text>
+            </svg>
+        </div>
+        <div class="hex hex-box-2">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="http://pluspng.com/img-png/logo-javascript-png-javascript-for-ile-y-ld-z-600.png" x="15" y="15" width="70" height="70" />
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img2)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">Web Funds</text>
+            </svg>
+        </div>
+
+
+    <div class="description-box">
+        <h1>Description about Project Selected</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            <br> Fugiat possimus magnam, cupiditate corrupti veritatis vero,
+            <br> necessitatibus vitae praesentium quam, non dolores voluptate sint.
+            <br> Aliquid quasi, dolore vero voluptatem animi consequatur?</p>
+    </div>
+
+
+    <div class="hex-main">
+        <div class="hex hex-box">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image xlink:href="https://farm4.staticflickr.com/3165/5733278274_2626612c70.jpg" x="-25" width="150" height="100" />
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">C#/.NET</text>
+            </svg>
+        </div>
+    </div>
+
+        <div class="hex hex-box-7">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="img7" patternUnits="userSpaceOnUse" width="100" height="100">
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img7)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">Flask</text>
+            </svg>
+        </div>
+        <div class="hex hex-box-6">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="img6" patternUnits="userSpaceOnUse" width="100" height="100">
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img6)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">Django</text>
+            </svg>
+        </div>
+        <div class="hex hex-box-5">
+            <svg viewbox="4 0 92 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="img5" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image xlink:href="https://is5-ssl.mzstatic.com/image/thumb/Purple124/v4/56/48/66/564866c6-ed2c-ac95-9664-c1364037605c/AppIcon-0-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-7.png/1200x630wa.png" x="15" y="15" width="70" height="70" />
+                    </pattern>
+                </defs>
+                <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img5)"/>
+                <text id="text" font-size="10" x="50" y="50" text-anchor="middle">C#/.NET</text>
+            </svg>
+        </div> -->
+
+    </div>
+
+    <!-- Work -->
+    <div class="work-page page">
+
+    </div>
+
+    <!-- Education -->
+    <div class="education-page page">
+
+    </div>
+
+    <!-- Resume -->
+    <div class="resume-page page">
+
+    </div>
+
+    <!-- <img src="static\portfolio_app\images\coding_dojo_logo_white.png" alt=""> -->
+    <div style="height: 2000px;"></div>
+
+
+<script src="script.js"></script>
+</body>
+
+
+
+
+
+
+<!-- <svg viewbox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+        <image xlink:href="https://farm4.staticflickr.com/3165/5733278274_2626612c70.jpg" x="-25" width="150" height="100" />
+        </pattern>
+    </defs>
+    <polygon id="hex" points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+    <text id="text" font-size="20" x="50" y="50" text-anchor="middle">Some text</text>
+</svg> -->

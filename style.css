@@ -1,0 +1,264 @@
+body{
+    color:rgb(32, 170, 229);
+    background: black;
+} 
+
+h1 {
+    font-family: vintage;
+}
+
+/* Hello Vintage Font */
+@font-face {
+    font-family: vintage;
+    src: url(fonts/vintage.TTF);
+}
+
+/* Hacked Font */
+@font-face {
+    font-family: hacked;
+    src: url(fonts/HACKED.TTF);
+}
+
+.name_logo {
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 5%;
+    width: 500px;
+}
+
+.headshot {
+    width: 200px;
+    height: 200px;
+    /* background-color: white; */
+    /* border-radius: 55%; */
+}
+
+.header {
+    height: 200px;
+    /* background-image: url(images/P1060124.jpg); */
+}
+
+.details {
+    color: white;
+    text-align: center;
+    margin: 10px;
+}
+
+.page {
+    border: 1px solid white;
+    min-height: 200px;
+    width: 100%;
+}
+
+/* Projects */
+.project {
+    font-family: vintage;
+}
+
+.about-page {
+    text-align: center;
+}
+
+.projects-page {
+    height: 90vh;
+    position: relative;
+}
+
+.hex-box {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-box-2 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 218px);
+    top: 316px;
+    margin: auto;
+}
+
+.hex-box-3 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 217px);
+    top: 163px;
+    margin: auto;
+}
+
+.hex-box-4 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-box-5 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-box-6 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 318px;
+    margin: auto;
+}
+
+.hex-box-7 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 394px;
+    margin: auto;
+}
+
+/* .hex-box {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-box-2 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 172px);
+    top: 382px;
+    margin: auto;
+}
+
+.hex-box-3 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 258px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-box-4 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 172px);
+    top: 100px;
+    margin: auto;
+}
+
+.hex-box-5 {
+    stroke: red;
+    position: absolute;
+    left: calc(50%);
+    top: 100px;
+    margin: auto;
+}
+
+.hex-box-6 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 86px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-box-7 {
+    stroke: red;
+    position: absolute;
+    left: calc(50%);
+    top: 382px;
+    margin: auto;
+} */
+
+.description-box {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-top: -50px;
+    margin-left: -50px; */
+    /* width: 100px;
+    height: 100px; */
+}
+
+
+/* New hexagon */
+svg{
+    width:175px;
+    margin:0 auto;
+}
+#hex{
+    /* stroke-width:2; */
+    /* stroke: red; */
+    /* fill-opacity:0.6; */
+    /* transition:fill-opacity .8s; */
+}
+#hex:hover{
+    /* fill-opacity:1; */
+    stroke: yellow;
+    /* fill: #20AAE5; */
+}
+#text{
+    stroke-width:0.5;
+    stroke:red;
+    /* fill-opacity:0.4; */
+    fill: red;
+    /* transition:fill-opacity .8s; */
+}
+/* #hex:hover + #text{
+    fill-opacity:1;
+} */
+
+
+
+
+
+
+/* Background Video */
+.fullscreen-bg {
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Shake Effect */
+svg:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s; 
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite; 
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
