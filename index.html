@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {% load staticfiles %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -19,6 +18,55 @@
 </head>
 <body>
 
+    <!-- <div style="position: absolute; top: 0; width: 100%; height: 90px; background-color: orange;"></div> -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Alexander Ege</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Slick Notes</a>
+                        <a class="dropdown-item" href="#">Ege Efficiency Interface</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Resume</a>
+                </li>
+                </ul>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Full Stack Developer</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+        <!-- <video loop muted autoplay poster="img/videoframe.jpg" style="width: 100%; background-size: cover; position: fixed;">
+            <source src="images/ink.mp4" type="video/mp4">
+        </video> -->
+
     <!-- FullScreen Background -->
     <!-- <div class="fullscreen-bg">
         <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
@@ -28,60 +76,20 @@
         </video>
     </div> -->
 
+    <div style="height: 56px; width: 100%;"></div><!-- Spacer -->
 
     <img class="name_logo" src="images\10.png" alt="">
 
-    <div class="video">        
+    <!-- <div class="video">        
         <video width="320" height="240" autoplay loop>
             <source src="images/Squareloadingscreen-1.m4v" type="video/mp4">
-            <!-- <source src="movie.ogg" type="video/ogg"> -->
             Your browser does not support the video tag.
         </video>
-    </div>
+    </div> -->
 
     <div class="header"></div>
     <!-- <div class="details">Alexander@Ege.com | (530) 276-4648 | Orange County, CA.</div> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#">Alexander Ege</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <!-- <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Slick Notes</a>
-                    <a class="dropdown-item" href="#">Ege Efficiency Interface</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Work</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Resume</a>
-            </li>
-            </ul>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Full Stack Developer</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    
 
     <!-- About -->
     <div class="about-page page">
@@ -221,6 +229,723 @@
 
     <!-- Work -->
     <div class="work-page page">
+
+
+
+            <div class="hex-row-1_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-86</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">241</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-86</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">88</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">46</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">164</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">46</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">318</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-86</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">394</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-218</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">316</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-2_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">163</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-85</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-65</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">46</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">11</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">178</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">88</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">178</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">241</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">178</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">394</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">46</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">472</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_7">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-86</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">547</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_8">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-218</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">470</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_9">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-350</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">394</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_10">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-350</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">241</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_11">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-350</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">88</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-3_12">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">11</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">47</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">179</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-65</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">310</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">11</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">310</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">164</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">310</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">317</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">310</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">470</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_7">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">178</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">547</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_8">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-350</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">547</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_9">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-482</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">470</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_10">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-482</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">317</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_11">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-482</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">164</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_12">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-482</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">11</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_13">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-350</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-65</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-4_14">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_7">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_8">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_9">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_10">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_11">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-5_12">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_7">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_8">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_9">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
+            
+            <div class="hex-row-6_10">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image src=""></image>
+                        </pattern>
+                    </defs>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <text id="text" font-size="8" x="30" y="25" text-anchor="middle">-217</text>
+                <text id="text" font-size="8" x="30" y="35" text-anchor="middle">-142</text>
+                </svg>
+            </div>
 
     </div>
 

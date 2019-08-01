@@ -19,10 +19,17 @@ h1 {
     src: url(fonts/HACKED.TTF);
 }
 
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
 .name_logo {
     position: absolute;
     left: calc(50% - 250px);
-    top: 5%;
+    top: 15%;
     width: 500px;
 }
 
@@ -34,7 +41,7 @@ h1 {
 }
 
 .header {
-    height: 200px;
+    /* height: 200px; */
     /* background-image: url(images/P1060124.jpg); */
 }
 
@@ -62,6 +69,12 @@ h1 {
 .projects-page {
     height: 90vh;
     position: relative;
+}
+
+.work-page {
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .hex-box {
@@ -181,17 +194,18 @@ svg{
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 0px;
     overflow: hidden;
     z-index: -100;
 }
 
 .fullscreen-bg__video {
+    border: 2px solid red;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%; 
 }
 
 /* Shake Effect */
@@ -216,5 +230,540 @@ svg:hover {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Dynamics testing */
+  .hex-fill {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-fill-2 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 218px);
+    top: 316px;
+    margin: auto;
+}
+
+.hex-fill-3 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 217px);
+    top: 163px;
+    margin: auto;
+}
+
+.hex-fill-4 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-fill-5 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-fill-6 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 318px;
+    margin: auto;
+}
+
+.hex-fill-7 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-fill-8 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 177px);
+    top: 241px;
+    margin: auto;
+}
+
+
+
+/* center = 50% - 86px | top = 241px */
+
+
+
+
+.hex-row-1_1 {
+    stroke: white;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-row-2_1 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-row-2_2 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-row-2_3 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 318px;
+    margin: auto;
+}
+
+.hex-row-2_4 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-row-2_5 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 218px);
+    top: 316px;
+    margin: auto;
+}
+
+.hex-row-2_6 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 217px);
+    top: 163px;
+    margin: auto;
+}
+
+.hex-row-3_1 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: -65px;
+    margin: auto;
+}
+
+.hex-row-3_2 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-3_3 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% + 178px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-row-3_4 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% + 178px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-row-3_5 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% + 178px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-row-3_6 {   
+    stroke: lime;
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 472px;
+    margin: auto;
+}
+
+.hex-row-3_7 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 547px;
+    margin: auto;
+}
+
+.hex-row-3_8 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 218px);
+    top: 470px;
+    margin: auto;
+}
+
+.hex-row-3_9 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-row-3_10 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-row-3_11 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-row-3_12 {
+    stroke: lime;
+    position: absolute;
+    left: calc(50% - 217px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-4_1 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 47px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-4_2 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 179px);
+    top: -65px;
+    margin: auto;
+}
+
+.hex-row-4_3 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 310px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-4_4 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 310px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-row-4_5 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 310px);
+    top: 317px;
+    margin: auto;
+}
+
+.hex-row-4_6 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 310px);
+    top: 470px;
+    margin: auto;
+}
+
+.hex-row-4_7 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% + 178px);
+    top: 547px;
+    margin: auto;
+}
+
+.hex-row-4_8 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: 547px;
+    margin: auto;
+}
+
+.hex-row-4_9 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 482px);
+    top: 470px;
+    margin: auto;
+}
+
+.hex-row-4_10 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 482px);
+    top: 317px;
+    margin: auto;
+}
+
+.hex-row-4_11 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 482px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-row-4_12 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 482px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-4_13 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 350px);
+    top: -65px;
+    margin: auto;
+}
+
+.hex-row-4_14 {
+    stroke: orange;
+    position: absolute;
+    left: calc(50% - 217px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-5_1 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 311px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-5_2 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 443px);
+    top: -65px;
+    margin: auto;
+}
+
+.hex-row-5_3 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 443px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-row-5_4 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 443px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-row-5_5 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 443px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-row-5_6 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% + 443px);
+    top: 547px;
+    margin: auto;
+}
+
+.hex-row-5_7 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 482px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-5_8 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 614px);
+    top: -65px;
+    margin: auto;
+}
+
+.hex-row-5_9{
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 614px);
+    top: 88px;
+    margin: auto;
+}
+
+.hex-row-5_10 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 614px);
+    top: 241px;
+    margin: auto;
+}
+
+.hex-row-5_11 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 614px);
+    top: 394px;
+    margin: auto;
+}
+
+.hex-row-5_12 {
+    stroke: cyan;
+    position: absolute;
+    left: calc(50% - 614px);
+    top: 547px;
+    margin: auto;
+}
+
+.hex-row-6_1 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 746px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-6_2 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 746px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-6_3 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 746px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-row-6_4 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 746px);
+    top: 317px;
+    margin: auto;
+}
+
+.hex-row-6_5 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% - 746px);
+    top: 470px;
+    margin: auto;
+}
+
+.hex-row-6_6 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 574px);
+    top: -142px;
+    margin: auto;
+}
+
+.hex-row-6_7 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 574px);
+    top: 11px;
+    margin: auto;
+}
+
+.hex-row-6_8 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 574px);
+    top: 164px;
+    margin: auto;
+}
+
+.hex-row-6_9 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 574px);
+    top: 317px;
+    margin: auto;
+}
+
+.hex-row-6_10 {
+    stroke: red;
+    position: absolute;
+    left: calc(50% + 574px);
+    top: 470px;
+    margin: auto;
+}
+
 
 
