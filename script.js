@@ -1,53 +1,60 @@
+// Play Video
+function playVideo(){
+  console.log("Play video");
+  $('#video').get(0).play()
+  // $('body').css({"background-color": "black"})
+  $("#video").delay(5000).fadeOut(400);
+  }
+
+
+
 $(document).ready(function(){
 
+  // Smooth Scrolling
+  $('a[href*="#"]').on('click', function(e) {
+    e.preventDefault()
+  
+    $('html, body').animate(
+      {
+        scrollTop: $($(this).attr('href')).offset().top,
+      },
+      750,
+      'linear'
+    )
+  })
+
+  // Create a random color
+  function randomColor(){
+    var colors = ['#ff0000', '#00ff00', '#0000ff'];
+    var random_color = colors[Math.floor(Math.random() * colors.length)];
+    return random_color;
+  }
+  rand_color = randomColor();
+
+  $(".hex-fill").children().children().css({stroke: "red"});
+
+  $(".hex-fill").hover(function(){
+
+    // $(this).finish().animate({top: $(this).position().top - 20});
+     $(this).finish().animate({opacity: 0}, 2000);
+    //  $(this).children().children().css({'stroke-width': .25}, 2000);
+    //  $(this).children().children().css({stroke: "black"});
+     $(this).css({'z-index': 9999});
+     // $(this).css({stroke : rand_color});
+    }, function(){
+      // $(this).finish().animate({top: $(this).position().top + 20});
+      $(this).finish().animate({opacity: 1}, 2500);
+      // $(this).children().children().css({"stroke": rand_color});
+      // $(this).children().children().css({stroke: "black"});
+    $(this).css({'z-index': 0});
+    // $(this).css({stroke : rand_color});
+  })
 
     // Hover over hexagons
     $(".hex").mouseenter(function(){
         // current_hover = $(this).html();
         // $(".hex-box").html(current_hover);
     })
-
-    // // Hover box 2
-    // $(".hex-box-2").hover(function(){
-    //     $(".hex-box-2").animate({"left": $(".hex-box-2").finish().position().left - 15, "top": $(".hex-box-2").position().top + 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-2").animate({"left": $(".hex-box-2").finish().position().left + 15, "top": $(".hex-box-2").position().top - 15}, 200);        
-    // });
-    
-    // // Hover box 3
-    // $(".hex-box-3").hover(function(){
-    //     $(".hex-box-3").animate({"left": $(".hex-box-3").finish().position().left - 15, "top": $(".hex-box-3").position().top - 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-3").animate({"left": $(".hex-box-3").finish().position().left + 15, "top": $(".hex-box-3").position().top + 15}, 200);        
-    // });
-    
-    // // Hover box 4
-    // $(".hex-box-4").hover(function(){
-    //     $(".hex-box-4").animate({"top": $(".hex-box-4").finish().position().top - 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-4").animate({"top": $(".hex-box-4").finish().position().top + 15}, 200);        
-    // });
-    
-    // // Hover box 5
-    // $(".hex-box-5").hover(function(){
-    //     $(".hex-box-5").animate({"left": $(".hex-box-5").finish().position().left + 15, "top": $(".hex-box-5").position().top - 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-5").animate({"left": $(".hex-box-5").finish().position().left - 15, "top": $(".hex-box-5").position().top + 15}, 200);        
-    // });
-    
-    // // Hover box 6
-    // $(".hex-box-6").hover(function(){
-    //     $(".hex-box-6").animate({"left": $(".hex-box-6").finish().position().left + 15, "top": $(".hex-box-6").position().top + 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-6").animate({"left": $(".hex-box-6").finish().position().left - 15, "top": $(".hex-box-6").position().top - 15}, 200);        
-    // });
-    
-    // // Hover box 7
-    // $(".hex-box-7").hover(function(){
-    //     $(".hex-box-7").animate({"top": $(".hex-box-7").finish().position().top + 15}, 200);        
-    // }, function(){
-    //     $(".hex-box-7").animate({"top": $(".hex-box-7").finish().position().top - 15}, 200);        
-    // });
 
     // Clicking a hexagon
     clickable = true;
