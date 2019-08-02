@@ -1,25 +1,121 @@
 body{
     /* color:rgb(32, 170, 229); */
     background: white;
+    overflow: hidden;
 } 
 
 h1 {
     font-family: vintage;
 }
 
-.center-content {
-    position: absolute;
-    left: calc(50% - 184.2px);
-    bottom: 0;
+.hex-grid div {
+    opacity: 0;
 }
 
-.center-content button {
-    border: 2px solid black;
+.hex-container div, .top {
+    z-index: 200;
+}
+
+.center-content-1 {
+    display: none;
+    position: absolute;
+    left: calc(50% - 184.2px);
+    top: 50%;
+}
+
+.center-content-1 a {
+    border-bottom: 2px solid black;
     color: black;
     padding: 5px;
     background-color: transparent;
     font-weight: bold;
 }
+
+.center-content {
+    position: absolute;
+    z-index: 1000;
+    left: calc(50% - 184.2px);
+    bottom: 5%;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px white;
+}
+
+.center-content a {
+    border-bottom: 2px solid black;
+    color: black;
+    padding: 5px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.page0, .page1, .page2, .page3, .page4, .page5 {
+    height: 100vh;
+}
+.page0 {
+    display: block;
+    background-color: white;
+}
+.page1 {
+    display: none;
+    background-color: cyan;
+    overflow: hidden;
+}
+.page2 {
+    display: none;
+    background-color: white;
+}
+.page3 {
+    display: none;
+    background-color: purple;
+}
+.page4 {
+    display: none;
+    background-color: greenyellow;
+}
+.page5 {
+    display: none;
+    background-color: yellow;
+}
+
+ .myVideo, .myVideo2, .myVideo3, .myVideo4, .myVideo5, .myVideo6 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.content {
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    background: rgb(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+.contents {
+    background-color: white;
+    padding: 15px;
+    position: absolute;
+    /* left: 40%; */
+    top: 40%;
+    z-index: 105;
+    color: black;
+}
+
+.clip1, .clip2, .clip3, .clip4, .clip5 {
+    width: 100%;
+}
+
+
+
+
+
+
 
 /* Hello Vintage Font */
 @font-face {
@@ -39,17 +135,19 @@ h1 {
     font-size: 100px;
     position:absolute;
     width: 100%;
+    top: 20%;
 }
 
 .enter_button{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    font-size: 40px;
     padding: 5px;
     color: black;
     background-color: transparent;
     margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
 }
 
 .navbar {
@@ -113,11 +211,9 @@ h1 {
     position: relative;
     overflow: hidden;
     /* background-color: black; */
-    background-color: white;
 }
 
 .hex-box {
-    stroke: red;
     position: absolute;
     left: calc(50% - 86px);
     top: 241px;
@@ -125,7 +221,6 @@ h1 {
 }
 
 .hex-box-2 {
-    stroke: red;
     position: absolute;
     left: calc(50% - 218px);
     top: 316px;
@@ -133,23 +228,20 @@ h1 {
 }
 
 .hex-box-3 {
-    stroke: red;
     position: absolute;
-    left: calc(50% - 217px);
+    left: calc(50% - 218px);
     top: 163px;
     margin: auto;
 }
 
 .hex-box-4 {
-    stroke: red;
     position: absolute;
-    left: calc(50% - 85px);
+    left: calc(50% - 86px);
     top: 88px;
     margin: auto;
 }
 
 .hex-box-5 {
-    stroke: red;
     position: absolute;
     left: calc(50% + 46px);
     top: 164px;
@@ -157,7 +249,6 @@ h1 {
 }
 
 .hex-box-6 {
-    stroke: red;
     position: absolute;
     left: calc(50% + 46px);
     top: 318px;
@@ -165,7 +256,6 @@ h1 {
 }
 
 .hex-box-7 {
-    stroke: red;
     position: absolute;
     left: calc(50% - 86px);
     top: 394px;
@@ -175,8 +265,8 @@ h1 {
 .description-box {
     opacity: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /* top: 50%;
+    left: 50%; */
     /* margin-top: -50px;
     margin-left: -50px; */
     /* width: 100px;
@@ -186,10 +276,13 @@ h1 {
 .reload {
     position: absolute;
     left: calc(50% - 20px);
-    bottom: 50px;
+    bottom: 80px;
     opacity: 0;
 }
 
+.hex-grid {
+    z-index: 101;
+}
 
 /* New hexagon */
 svg{
@@ -198,7 +291,6 @@ svg{
 }
 #hex{
     /* stroke-width:2; */
-    /* stroke: red; */
     /* fill-opacity:0.6; */
     /* transition:fill-opacity .8s; */
 }
@@ -274,7 +366,6 @@ svg:hover {
 
 /* Dynamics testing */
 .hex-fill {
-    stroke: red;
     stroke-width: 0.5px;
 }
 
@@ -322,8 +413,8 @@ svg:hover {
 
 .hex-row-2_6 {
     position: absolute;
-    left: calc(50% - 217px);
-    top: 163px;
+    left: calc(50% - 218px);
+    top: 164px;
     margin: auto;
 }
 
@@ -406,7 +497,7 @@ svg:hover {
 
 .hex-row-3_12 {
     position: absolute;
-    left: calc(50% - 217px);
+    left: calc(50% - 218px);
     top: 11px;
     margin: auto;
 }
@@ -504,7 +595,7 @@ svg:hover {
 
 .hex-row-4_14 {
     position: absolute;
-    left: calc(50% - 217px);
+    left: calc(50% - 218px);
     top: -142px;
     margin: auto;
 }
@@ -518,35 +609,35 @@ svg:hover {
 
 .hex-row-5_2 {
     position: absolute;
-    left: calc(50% + 443px);
+    left: calc(50% + 442px);
     top: -65px;
     margin: auto;
 }
 
 .hex-row-5_3 {
     position: absolute;
-    left: calc(50% + 443px);
+    left: calc(50% + 442px);
     top: 88px;
     margin: auto;
 }
 
 .hex-row-5_4 {
     position: absolute;
-    left: calc(50% + 443px);
+    left: calc(50% + 442px);
     top: 241px;
     margin: auto;
 }
 
 .hex-row-5_5 {
     position: absolute;
-    left: calc(50% + 443px);
+    left: calc(50% + 442px);
     top: 394px;
     margin: auto;
 }
 
 .hex-row-5_6 {
     position: absolute;
-    left: calc(50% + 443px);
+    left: calc(50% + 442px);
     top: 547px;
     margin: auto;
 }
@@ -660,6 +751,48 @@ svg:hover {
     position: absolute;
     left: calc(50% + 574px);
     top: 470px;
+    margin: auto;
+}
+
+.hex-row-7_1 {
+    position: absolute;
+    left: calc(50% + 574px);
+    top: 623px;
+    margin: auto;
+}
+
+.hex-row-7_2 {
+    position: absolute;
+    left: calc(50% + 310px);
+    top: 623px;
+    margin: auto;
+}
+
+.hex-row-7_3 {
+    position: absolute;
+    left: calc(50% + 46px);
+    top: 623px;
+    margin: auto;
+}
+
+.hex-row-7_4 {
+    position: absolute;
+    left: calc(50% - 218px);
+    top: 623px;
+    margin: auto;
+}
+
+.hex-row-7_5 {
+    position: absolute;
+    left: calc(50% - 482px);
+    top: 623px;
+    margin: auto;
+}
+
+.hex-row-7_6 {
+    position: absolute;
+    left: calc(50% - 746px);
+    top: 623px;
     margin: auto;
 }
 

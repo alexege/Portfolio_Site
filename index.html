@@ -17,51 +17,7 @@
 
 </head>
 <style>
-    .page1, .page2, .page3, .page4, .page5 {
-        height: 100vh;
-    }
-    .page0 {
-        display: block;
-        background-color: grey;
-    }
-    .page1 {
-        display: none;
-        background-color: blue;
-    }
-    .page2 {
-        display: none;
-        background-color: orange;
-    }
-    .page3 {
-        display: none;
-        background-color: purple;
-    }
-    .page4 {
-        display: none;
-        background-color: greenyellow;
-    }
-    .page5 {
-        display: none;
-        background-color: yellow;
-    }
-
-    .myVideo, .myVideo2, .myVideo3, .myVideo4, .myVideo5, .myVideo6 {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-    }
-
-    .content {
-        border: 1px solid red;
-        position: fixed;
-        bottom: 0;
-        background: rgb(0, 0, 0, 0.5);
-        color: #f1f1f1;
-        width: 100%;
-        padding: 20px;
-    }
+    
 </style>
 <body>
 
@@ -78,40 +34,57 @@
 
     <!-- ================================================ Home Page ================================================ -->
     <div class="page0">
-        <video muted loop class="bg-video myVideo">
+
+        <h1 class="logo">Alexander Ege</h1>
+
+        <!-- <video muted autoplay loop src="images/Squareloadingscreen-1.m4v" type="video/mp4" style="width: 200px; height: 250px; position: absolute; left: 50%; top: 45%;"></video> -->
+
+        <video muted loop class="bg-video clip1">
             <source src="images/Ink1-1.m4v" type="video/mp4">
         </video>
 
-        <button onclick="playVideo('myVideo')" class="enter_button">Enter</button>
 
-        <h1 class="logo">Alexander Ege</h1>
+        <a onclick="pageOneTransition()" class="enter_button">Enter</a>
+        <a onclick="pageTwoTransition()" class="enter_button"><br>Next</a>
+
         
-        <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1), playVideo('myVideo2')">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+        <div class="center-content-1">
+            <a onclick="pageOneTransition()">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
     <!-- ================================================ About Page ================================================ -->
     <div class="page1">
-        
-        <video muted loop class="bg-video myVideo2">
+
+        <video muted loop class="bg-video clip2">
             <source src="images/Ink2-1.m4v" type="video/mp4">
         </video>
+
+        <div class="contents">
+
+            <h1>About</h1>
+            <img class="headshot" src="images/headshot.png" alt="">
+            <p>I am a Computer Engineer from Chicago, Illinois. <br>
+                I attended Southern Illinois University Carbondale, where <br>
+                I earned my bachelors' of Science in Computer Engineering. <br>
+                After graduating in December of 2015, I began working as a <br>
+                Technical Rotation Associate for Trend Micro.
+            </p>
+        </div>
 
         <div class="hex-grid">
         <div class="hex-fill hex-row-1_1">
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -119,10 +92,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -130,10 +102,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -141,10 +112,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -152,10 +122,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -163,10 +132,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -174,10 +142,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -185,10 +152,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -196,10 +162,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -207,10 +172,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -218,10 +182,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -229,10 +192,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -240,10 +202,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -251,10 +212,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -262,10 +222,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -273,10 +232,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -284,10 +242,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -295,10 +252,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -306,10 +262,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -317,10 +272,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -328,10 +282,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -339,10 +292,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -350,10 +302,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -361,10 +312,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -372,10 +322,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -383,10 +332,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -394,10 +342,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -405,10 +352,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -416,10 +362,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -427,10 +372,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -438,10 +382,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -449,10 +392,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -460,10 +402,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -471,10 +412,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -482,10 +422,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -493,10 +432,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -504,10 +442,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -515,10 +452,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -526,10 +462,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -537,10 +472,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -548,10 +482,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -559,10 +492,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -570,10 +502,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -581,10 +512,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -592,10 +522,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -603,10 +532,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -614,10 +542,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -625,10 +552,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -636,10 +562,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -647,10 +572,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -658,10 +582,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -669,10 +592,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -680,10 +602,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -691,10 +612,9 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
             
@@ -702,26 +622,89 @@
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                     <defs>
                         <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
                         </pattern>
                     </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
+                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_1">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_2">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_3">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_4">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_5">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                </svg>
+            </div>
+            
+            <div class="hex-fill hex-row-7_6">
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                    <defs>
+                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                        </pattern>
+                    </defs>
+                    <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
                 </svg>
             </div>
         </div>
         
         <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1)">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+            <a onclick="switchToPage(0)" style="color: #5fe5c9">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
     <!-- ================================================ Projects Page ================================================ -->
-    <div class="page2">Page 2
+    <div class="page2">
+
+            <video muted loop class="bg-video clip3">
+                <source src="images/Ink2-1.m4v" type="video/mp4">
+            </video>
 
             <h1>Projects</h1>
 
@@ -731,12 +714,12 @@
             <div class="C# project"></div>
     
     
-            <div class="description-box">
+            <div class="description-box top contents">
                     <h1>Selection</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium impedit et itaque vitae culpa suscipit! Quisquam delectus eligendi voluptatem soluta.</p>
                 </div>
         
-            <div class="description-box-python" style="display: none;">
+            <div class="description-box-python top" style="display: none;">
                     <h1>Python</h1>
                     <h3>Flask</h3>
                     <p>We spent two weeks learning the basics of MySQL using Flask.</p>
@@ -746,7 +729,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, autem.</p>
             </div>
         
-            <div class="description-box-mean" style="display: none;">
+            <div class="description-box-mean top" style="display: none;">
                     <h1>Mean</h1>
                     <h3>MongoDB</h3>
                     <h3>Express</h3>
@@ -754,25 +737,32 @@
                     <h3>Node.js</h3>
             </div>
         
-            <div class="description-box-webfunds" style="display: none;">
+            <div class="description-box-webfunds top" style="display: none;">
                     <h1>Web Fundamentals</h1>
                     <h3>HTML</h3>
                     <h3>CSS</h3>
                     <h3>JavaScript</h3>
             </div>
+
+            <div class="description-box-CSharp top" style="display: none;">
+                    <h1>C#</h1>
+                    <h1>ASP.NET</h1>
+            </div>
     
-            <a class="reload">Reload</a>
-            
+            <a class="reload top">Reload</a>
+
             <!-- Hex boxes -->
+        <div class="hex-container">
             <div class="center-hex">
             <div class="hex hex-box">
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                 <defs>
                     <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
-                        <image xlink:href="images/coding_dojo_logo_white.png" x="10" y="10" width="44" height="44" />
+                        <!-- <image xlink:href="images/coding_dojo_logo_white.png" x="10" y="10" width="44" height="44" /> -->
                     </pattern>
                 </defs>
                 <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img1)"/>
+                <text font-size="10" x="32" y="34" text-anchor="middle" style="font-family: vintage">Projects</text>
                 </svg>
             </div>
             </div>
@@ -781,7 +771,7 @@
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                 <defs>
                     <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
-                        <image xlink:href="images/Python_Sticker2.png" x="0" y="0" width="64" height="64" />
+                        <image xlink:href="images/Python_Sticker.png" x="0" y="0" width="64" height="64" />
                     </pattern>
                 </defs>
                 <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img2)"/>
@@ -810,11 +800,11 @@
                 </svg>
             </div>
     
-            <div class="hex hex-box-5" name="python">
+            <div class="hex hex-box-5" name="C#">
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
                 <defs>
                     <pattern id="img5" patternUnits="userSpaceOnUse" width="100" height="100">
-                        <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
+                        <image xlink:href="images/CSharp.png" x="0" y="0" width="64" height="64" />
                     </pattern>
                 </defs>
                 <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img5)"/>
@@ -842,50 +832,671 @@
                 <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img7)"/>
                 </svg>
             </div>
+        </div>
+
+            <div class="hex-grid">
+                    <div class="hex-fill hex-row-1_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-2_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_7">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_8">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_9">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_10">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_11">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-3_12">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_7">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_8">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_9">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_10">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_11">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_12">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_13">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-4_14">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_7">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_8">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_9">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_10">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_11">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-5_12">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_7">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_8">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_9">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-6_10">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_1">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_2">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_3">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_4">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                        
+                        <div class="hex-fill hex-row-7_6">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+                                <defs>
+                                    <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
+                                    </pattern>
+                                </defs>
+                                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z'/>
+                            </svg>
+                        </div>
+                    </div>
 
         <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1)">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+            <a onclick="switchToPage(0)">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
     <!-- ================================================ Work Page ================================================ -->
-    <div class="page3">Page 3
+    <div class="page3">
+
+        <h1>Work History</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
         <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1)">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+            <a onclick="switchToPage(0)">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
     <!-- ================================================ Education Page ================================================ -->
-    <div class="page4">Page 4
+    <div class="page4">
         <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1)">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+            <a onclick="switchToPage(0)">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
     <!-- ================================================ Resume Page ================================================ -->
-    <div class="page5">Page 5
+    <div class="page5">
         <div class="center-content">
-            <button onclick="switchToPage(0)">Home</button>
-            <button onclick="switchToPage(1)">About</button>
-            <button onclick="switchToPage(2)">Projects</button>
-            <button onclick="switchToPage(3)">Work</button>
-            <button onclick="switchToPage(4)">Education</button>
-            <button onclick="switchToPage(5)">Resume</button>
+            <a onclick="switchToPage(0)">Home</a>
+            <a onclick="pageTwoTransition()">About</a>
+            <a onclick="pageThreeTransition()">Projects</a>
+            <a onclick="pageFourTransition()">Work</a>
+            <a onclick="pageFiveTransition()">Education</a>
+            <a onclick="pageSixTransition()">Resume</a>
         </div>
     </div>
 
@@ -930,7 +1541,6 @@
             </div>
     </nav> -->
 
-    <div style="height: 400px; width: 100%; border: 1px solid red;"></div>
 
         <!-- <video loop muted autoplay poster="img/videoframe.jpg" style="width: 100%; background-size: cover; position: fixed;">
             <source src="images/ink.mp4" type="video/mp4">
@@ -945,7 +1555,6 @@
         </video>
     </div> -->
 
-    <div style="height: 56px; width: 100%;"></div><!-- Spacer -->
 
     <!-- <img class="name_logo" src="images\10.png" alt=""> -->
 
@@ -958,768 +1567,11 @@
         </video>
     </div> -->
 
-    <div class="header"></div>
+    <!-- <div class="header"></div> -->
     <!-- <div class="details">Alexander@Ege.com | (530) 276-4648 | Orange County, CA.</div> -->
     
 
-    <!-- About -->
-    <div class="about-page page" id="about">
-        <h1>About</h1>
-        <img class="headshot" src="images/headshot.png" alt="">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, voluptatum debitis! Ducimus repellendus architecto eum dolore voluptatem, vitae ex incidunt aliquam quam porro aliquid! Enim fugit facilis quia non qui?</p>
-    </div>
     
-    <!-- Projects -->
-    <div class="projects-page page" id="projects">
-
-        <!-- <div style="width: 50%; border: 1px solid white;height: 450px;"></div> -->
-
-        <h1>Projects</h1>
-
-        <div class="Web Fundamentals project"></div>
-        <div class="Python project"></div>
-        <div class="JavaScript project"></div>
-        <div class="C# project"></div>
-
-
-        <div class="description-box">
-                <h1>Selection</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium impedit et itaque vitae culpa suscipit! Quisquam delectus eligendi voluptatem soluta.</p>
-            </div>
-    
-        <div class="description-box-python" style="display: none;">
-                <h1>Python</h1>
-                <h3>Flask</h3>
-                <p>We spent two weeks learning the basics of MySQL using Flask.</p>
-                <h3>Django</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, tempore?</p>
-                <h3>MySQL</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, autem.</p>
-        </div>
-    
-        <div class="description-box-mean" style="display: none;">
-                <h1>Mean</h1>
-                <h3>MongoDB</h3>
-                <h3>Express</h3>
-                <h3>Angular</h3>
-                <h3>Node.js</h3>
-        </div>
-    
-        <div class="description-box-webfunds" style="display: none;">
-                <h1>Web Fundamentals</h1>
-                <h3>HTML</h3>
-                <h3>CSS</h3>
-                <h3>JavaScript</h3>
-        </div>
-
-        <a class="reload">Reload</a>
-        
-        <!-- Hex boxes -->
-        <div class="center-hex">
-        <div class="hex hex-box">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img1" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/coding_dojo_logo_white.png" x="10" y="10" width="44" height="44" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img1)"/>
-            </svg>
-        </div>
-        </div>
-
-        <div class="hex hex-box-2" name="webfunds">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img2" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/Python_Sticker2.png" x="0" y="0" width="64" height="64" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img2)"/>
-            </svg>
-        </div>
-
-        <div class="hex hex-box-3" name="mean">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img3" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img3)"/>
-            </svg>
-        </div>
-
-        <div class="hex hex-box-4" name="python">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
-                        <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img4)"/>
-            </svg>
-        </div>
-
-        <div class="hex hex-box-5" name="python">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img5" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img5)"/>
-            </svg>
-        </div>
-
-        <div class="hex hex-box-6" name="mean">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img6" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img6)"/>
-            </svg>
-        </div>
-
-        <div class="hex hex-box-7" name="mean">
-        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-            <defs>
-                <pattern id="img7" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="images/Mean.png" x="0" y="0" width="64" height="64" />                  
-                </pattern>
-            </defs>
-            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img7)"/>
-            </svg>
-        </div>
-
-    </div>
-
-    <!-- Work -->
-    <div class="work-page page" id="work">
-
-
-
-            <div class="hex-fill hex-row-1_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_2">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_3">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_4">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_5">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-2_6">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_2">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_3">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_4">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_5">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_6">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_7">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_8">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_9">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_10">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_11">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-3_12">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_2">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_3">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_4">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_5">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_6">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_7">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_8">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_9">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_10">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_11">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_12">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_13">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-4_14">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_2">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_3">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_4">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_5">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_6">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_7">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_8">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_9">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_10">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_11">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-5_12">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_1">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_2">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_3">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_4">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_5">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_6">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_7">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_8">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_9">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-            
-            <div class="hex-fill hex-row-6_10">
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
-                    <defs>
-                        <pattern id="img0" patternUnits="userSpaceOnUse" width="100" height="100">
-                            <image src="images/coding_dojo_logo_white.png">
-                        </pattern>
-                    </defs>
-                <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img0)"/>
-                </svg>
-            </div>
-
-    </div>
-
-    <!-- Education -->
-    <div class="education-page page" id="education">
-
-    </div>
-
-    <!-- Resume -->
-    <div class="resume-page page" id="resume">
-
-    </div>
-
-    <!-- <img src="static\portfolio_app\images\coding_dojo_logo_white.png" alt=""> -->
-    <div style="height: 2000px;"></div>
 
 <script src="script.js"></script>
 </body>
