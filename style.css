@@ -8,6 +8,16 @@ h1 {
     font-family: vintage;
 }
 
+.top {
+    font-size: 26px;
+}
+
+.anagram {
+    font-size: 34px;
+    font-weight: bolder;
+    color: #5fe5c9;
+}
+
 .hex-grid div {
     opacity: 0;
 }
@@ -68,15 +78,15 @@ h1 {
 }
 .page3 {
     display: none;
-    background-color: purple;
+    background-color: white;
 }
 .page4 {
     display: none;
-    background-color: greenyellow;
+    background-color: white;
 }
 .page5 {
     display: none;
-    background-color: yellow;
+    background-color: white;
 }
 
  .myVideo, .myVideo2, .myVideo3, .myVideo4, .myVideo5, .myVideo6 {
@@ -99,6 +109,8 @@ h1 {
 
 .contents {
     background-color: white;
+    border: 2px solid #5fe5c9;
+    border-radius: 4px;
     padding: 15px;
     position: absolute;
     /* left: 40%; */
@@ -213,6 +225,13 @@ h1 {
     /* background-color: black; */
 }
 
+.project-thumbnail {
+    border: 1px solid #5fe5c9;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
 .hex-box {
     position: absolute;
     left: calc(50% - 86px);
@@ -259,6 +278,13 @@ h1 {
     position: absolute;
     left: calc(50% - 86px);
     top: 394px;
+    margin: auto;
+}
+
+.hex-box-enter {
+    position: absolute;
+    left: calc(50% - 86px);
+    top: 88px;
     margin: auto;
 }
 

@@ -48,11 +48,13 @@ function pageTwoTransition(){
   // $(".clip2").delay(5000).fadeOut();
   switchToPage(1)
   setTimeout(loadAtRandom, 500);
+  $(".contents").hide().delay(2000).fadeIn(500);
   // loadAtRandom();
 }
 
 function pageThreeTransition(){
   $(".hex-grid div").css({"opacity": "0"}); 
+  setTimeout(loadAtRandom, 500);
   // $(".clip3").get(0).play();
   // $(".clip3").delay(5000).fadeOut();
   switchToPage(2);
@@ -108,7 +110,7 @@ function switchToPage(page_num){
     $(".page5").css({display: "none"});
 
     // $(".hex-row-1_1").fadeIn(500);
-    $(".contents").hide().delay(5000).fadeIn(500);
+    // $(".contents").hide().delay(5000).fadeIn(500);
     $(".contents").css({top: $(window).height()/2 - $(".contents").height()/2});
     $(".contents").css({left: $(window).width()/2 - $(".contents").width()/2});
   } else if (page_num == 2){
@@ -150,8 +152,20 @@ function switchToPage(page_num){
 }
 
 
+
 $(document).ready(function(){
-  
+
+  // swap out projects title
+  $(".hex").hover(function(){
+    console.log($(this).css("border"));
+    $(this).children("svg").css({"stroke-width": "1px"});
+    $(this).children("svg").css({"stroke": "yellow"});
+    $("#center-text").text(($(this).attr('name')));
+  }, function(){
+    $(this).children("svg").css({"stroke-width": "0px"});
+    
+  })
+
   // Fade out project hexagons
   function hideProjectHex(){
   $(".hex-row-1_1").finish().finish().fadeOut();
@@ -197,7 +211,7 @@ $(document).ready(function(){
   }
   rand_color = randomColor();
 
-  $(".hex-fill").children().children().css({stroke: "black"});
+  $(".hex-fill").children().children().css({stroke: "#5fe5c9"});
   $(".hex-fill").children().children().css({"stroke-width": 1});
   $(".hex-fill").children().children().css({"fill": "rgb(255, 255, 255, 0.55)"});
   // $(".hex-fill").children().children().css({"fill": rgb(255, 255, 255, 0.5)});

@@ -43,6 +43,17 @@
             <source src="images/Ink1-1.m4v" type="video/mp4">
         </video>
 
+        <!-- <div class="hex hex-box-enter" name="python">
+            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' width='200' height='200'>
+            <defs>
+                <pattern id="img4" patternUnits="userSpaceOnUse" width="100" height="100">
+                        <image xlink:href="images/Python.png" x="0" y="0" width="64" height="64" />
+                </pattern>
+            </defs>
+            <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="white" stroke="#5fe5c9"/>
+            <text font-size="10" x="30" y="35" text-anchor="middle">Enter</text>
+            </svg>
+        </div> -->
 
         <a onclick="pageOneTransition()" class="enter_button">Enter</a>
         <a onclick="pageTwoTransition()" class="enter_button"><br>Next</a>
@@ -690,7 +701,7 @@
         </div>
         
         <div class="center-content">
-            <a onclick="switchToPage(0)" style="color: #5fe5c9">Home</a>
+            <a onclick="switchToPage(0)">Home</a>
             <a onclick="pageTwoTransition()">About</a>
             <a onclick="pageThreeTransition()">Projects</a>
             <a onclick="pageFourTransition()">Work</a>
@@ -730,11 +741,13 @@
             </div>
         
             <div class="description-box-mean top" style="display: none;">
-                    <h1>Mean</h1>
-                    <h3>MongoDB</h3>
-                    <h3>Express</h3>
-                    <h3>Angular</h3>
-                    <h3>Node.js</h3>
+                
+                <p><span class="anagram">M</span>ongo <span class="anagram">E</span>xpress <span class="anagram">A</span>ngular <span class="anagram">N</span>ode.js</p>
+                
+                <div class="project-thumbnail">
+                    <p>Movies</p>
+                </div>
+
             </div>
         
             <div class="description-box-webfunds top" style="display: none;">
@@ -762,7 +775,7 @@
                     </pattern>
                 </defs>
                 <path d='M64 32 L48 4 L16 4 L0 32 L16 60 L48 60 Z' fill="url(#img1)"/>
-                <text font-size="10" x="32" y="34" text-anchor="middle" style="font-family: vintage">Projects</text>
+                <text font-size="10" x="32" y="34" text-anchor="middle" style="font-family: vintage; stroke-width: 0px" id="center-text">Projects</text>
                 </svg>
             </div>
             </div>
