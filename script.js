@@ -1,27 +1,80 @@
 // Play Video
-function playVideo(){
+function playVideo(id){
   console.log("Play video");
-  $('#video').get(0).play()
-  // $('body').css({"background-color": "black"})
-  $("#video").delay(5000).fadeOut(400);
+  $(`.${id}`).get(0).play()
+  $(".enter_button").fadeOut(400);
+  // $(`.${id}`).delay(5000).fadeOut(400);
   }
 
+function switchToPage(page_num){
+  console.log(page_num);
+  if(page_num == 0){
+    $(".page0").css({display: "block"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "none"});
+  } else if(page_num == 1){
+    $(".page0").css({display: "none"});
+    $(".page1").css({display: "block"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "none"});
+  } else if (page_num == 2){
+    $(".page0").css({display: "none"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "block"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "none"});
+  }else if (page_num == 3){
+    $(".page0").css({display: "none"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "block"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "none"});
+  }else if (page_num == 4){
+    $(".page0").css({display: "none"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "block"});
+    $(".page5").css({display: "none"});
+  } else if (page_num == 5){
+    $(".page0").css({display: "none"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "block"});
+  }else {
+    $(".page0").css({display: "block"});
+    $(".page1").css({display: "none"});
+    $(".page2").css({display: "none"});
+    $(".page3").css({display: "none"});
+    $(".page4").css({display: "none"});
+    $(".page5").css({display: "none"});
+  }
+}
 
 
 $(document).ready(function(){
 
   // Smooth Scrolling
-  $('a[href*="#"]').on('click', function(e) {
-    e.preventDefault()
+  // $('a[href*="#"]').on('click', function(e) {
+  //   e.preventDefault()
   
-    $('html, body').animate(
-      {
-        scrollTop: $($(this).attr('href')).offset().top,
-      },
-      750,
-      'linear'
-    )
-  })
+  //   $('html, body').animate(
+  //     {
+  //       scrollTop: $($(this).attr('href')).offset().top,
+  //     },
+  //     750,
+  //     'linear'
+  //   )
+  // })
 
   // Create a random color
   function randomColor(){
@@ -34,27 +87,12 @@ $(document).ready(function(){
   $(".hex-fill").children().children().css({stroke: "red"});
 
   $(".hex-fill").hover(function(){
-
-    // $(this).finish().animate({top: $(this).position().top - 20});
-     $(this).finish().animate({opacity: 0}, 2000);
-    //  $(this).children().children().css({'stroke-width': .25}, 2000);
-    //  $(this).children().children().css({stroke: "black"});
-     $(this).css({'z-index': 9999});
-     // $(this).css({stroke : rand_color});
-    }, function(){
-      // $(this).finish().animate({top: $(this).position().top + 20});
-      $(this).finish().animate({opacity: 1}, 2500);
-      // $(this).children().children().css({"stroke": rand_color});
-      // $(this).children().children().css({stroke: "black"});
+    $(this).finish().animate({opacity: 0}, 2000);
+    $(this).css({'z-index': 9999});
+  }, function(){
+    $(this).finish().animate({opacity: 1}, 2500);
     $(this).css({'z-index': 0});
-    // $(this).css({stroke : rand_color});
   })
-
-    // Hover over hexagons
-    $(".hex").mouseenter(function(){
-        // current_hover = $(this).html();
-        // $(".hex-box").html(current_hover);
-    })
 
     // Clicking a hexagon
     clickable = true;
@@ -107,9 +145,6 @@ $(document).ready(function(){
 
         clickable = true;
     })
-
-
-
 
 
     // Move navbar on scroll
