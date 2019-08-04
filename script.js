@@ -1,5 +1,5 @@
-
-
+// $(".hex-box-enter").css({top: $(window).height()/2 - $(".hex-box-enter").height()/2});
+// $(".hex-box-enter").css({left: $(window).width()/2 - $(".hex-box-enter").width()/2});
 // Randomly populate with hexagons
 function loadAtRandom(){
     
@@ -13,6 +13,7 @@ function loadAtRandom(){
       var delay = Math.ceil(Math.random() * maxDelay);
       var speed = maxSpeed + Math.ceil(Math.random() * (minSpeed - maxSpeed));
       count++;
+      fadeTo = Math.random(0.5, 1);
       $(this).delay(delay).fadeTo(speed, fadeTo, function(){
           count--;
           if (count == 0){
@@ -33,26 +34,33 @@ function loadContent(){
 
 
 function pageOneTransition(){
-  console.log("pageOneTransition()");
-  $(".clip1").get(0).play();
+  $(".hex-grid").css({display: "block"});
+  $(".hex-grid div").css({"opacity": "0"});
+  $(".hex-box-enter").fadeOut();
+  setTimeout(loadAtRandom, 500);
+
   $(".enter_button").fadeOut();
-  $(".clip1").delay(5000).fadeOut(function(){
-    switchToPage(1);
-    setTimeout(loadAtRandom, 500);
-  });
 }
 
 function pageTwoTransition(){
+  $(".about-contents").hide().delay(1000).fadeIn();
+  // $(".center-content a:nth-child(2)").css({color: "red"});
+  // $(".center-content a:nth-child(2)").css({"border-color": "#5fe5c9"});
   $(".hex-grid div").css({"opacity": "0"});
   // $(".clip2").get(0).play();
   // $(".clip2").delay(5000).fadeOut();
   switchToPage(1)
   setTimeout(loadAtRandom, 500);
+  // setInterval(function(){
+  //   console.log("Firing again");
+  //   setTimeout(loadAtRandom, 500);
+  // }, 1000);
   $(".contents").hide().delay(2000).fadeIn(500);
   // loadAtRandom();
 }
 
 function pageThreeTransition(){
+  $(".project-contents").hide().delay(1000).fadeIn();
   $(".hex-grid div").css({"opacity": "0"}); 
   setTimeout(loadAtRandom, 500);
   // $(".clip3").get(0).play();
@@ -61,20 +69,21 @@ function pageThreeTransition(){
 }
 
 function pageFourTransition(){
-  // $(".clip3").get(0).play();
-  // $(".clip3").delay(5000).fadeOut();
+  $(".work-contents").hide().delay(1000).fadeIn();
+  $(".hex-grid div").css({"opacity": "0"}); 
+  setTimeout(loadAtRandom, 500);
   switchToPage(3);
 }
 
 function pageFiveTransition(){
-  // $(".clip3").get(0).play();
-  // $(".clip3").delay(5000).fadeOut();
+  $(".hex-grid div").css({"opacity": "0"}); 
+  setTimeout(loadAtRandom, 500);
   switchToPage(4);
 }
 
 function pageSixTransition(){
-  // $(".clip3").get(0).play();
-  // $(".clip3").delay(5000).fadeOut();
+  $(".hex-grid div").css({"opacity": "0"}); 
+  setTimeout(loadAtRandom, 500);
   switchToPage(5);
 }
 
@@ -87,20 +96,54 @@ function playVideo(id){
   $(`.${id}`).delay(5000).fadeOut(400);
   }
 
+// Hide elements
+function hideProjectHex(){
+  $(".hex-row-1_1").finish().finish().fadeOut();
+  $(".hex-row-2_1").finish().fadeOut();
+  $(".hex-row-2_2").finish().fadeOut();
+  $(".hex-row-2_3").finish().fadeOut();
+  $(".hex-row-2_4").finish().fadeOut();
+  $(".hex-row-2_5").finish().fadeOut();
+  $(".hex-row-2_6").finish().fadeOut();
+  $(".hex-row-3_1").finish().fadeOut();
+  $(".hex-row-3_2").finish().fadeOut();
+  $(".hex-row-3_3").finish().fadeOut();
+  $(".hex-row-3_4").finish().fadeOut();
+  $(".hex-row-3_5").finish().fadeOut();
+  $(".hex-row-3_6").finish().fadeOut();
+  $(".hex-row-3_7").finish().fadeOut();
+  $(".hex-row-3_8").finish().fadeOut();
+  $(".hex-row-3_9").finish().fadeOut();
+  $(".hex-row-3_10").finish().fadeOut();
+  $(".hex-row-3_11").finish().fadeOut();
+  $(".hex-row-3_12").finish().fadeOut();
+}
+
+// Center contents
+// function centerContents(){
+//   console.log("WinHeight: ", $(window).height());
+//   console.log("WinWidth: ", $(window).width());
+//   console.log("divHeight: ", $(".contents").height());
+//   console.log("WinWidth: ", $(".contents").width());
+//   $(".contents").css({top: $(window).height()/2 - $(".contents").height()/2});
+//   $(".contents").css({left: $(window).width()/2 - $(".contents").width()/2});
+// }
+
+
 function switchToPage(page_num){
   console.log(page_num);
   if(page_num == 0){
+    hideProjectHex();
+    $(".hex-box-enter").css({display: "none"});
     $(".page0").css({display: "block"});
     $(".page1").css({display: "none"});
     $(".page2").css({display: "none"});
     $(".page3").css({display: "none"});
     $(".page4").css({display: "none"});
     $(".page5").css({display: "none"});
-
-    $(".logo").css({color: "black"});
-    $(".center-content-1").css({display: "block"});
+    
+    $(".center-content").css({display: "block"});
     $(".enter_button").css({display: "none"});
-
   } else if(page_num == 1){
     $(".page0").css({display: "none"});
     $(".page1").css({display: "block"});
@@ -111,8 +154,6 @@ function switchToPage(page_num){
 
     // $(".hex-row-1_1").fadeIn(500);
     // $(".contents").hide().delay(5000).fadeIn(500);
-    $(".contents").css({top: $(window).height()/2 - $(".contents").height()/2});
-    $(".contents").css({left: $(window).width()/2 - $(".contents").width()/2});
   } else if (page_num == 2){
     $(".page0").css({display: "none"});
     $(".page1").css({display: "none"});
@@ -155,6 +196,24 @@ function switchToPage(page_num){
 
 $(document).ready(function(){
 
+
+  $(".linkedin-slider, .github-slider, .youtube-slider, .facebook-slider").hide();
+  $(".trigger").hover(function(){
+    $(this).stop().animate({"padding-left": "8px"}).css({"border-left":"2px solid rgb(6,170,226)"});
+    if($(this).attr('name') == 'linkedin'){
+      $(".linkedin-slider").stop().fadeIn();
+    } else if($(this).attr('name') == 'github'){
+      $(".github-slider").stop().fadeIn();
+    } else if($(this).attr('name') == 'youtube'){
+      $(".youtube-slider").stop().fadeIn();
+    } else if($(this).attr('name') == 'facebook'){
+      $(".facebook-slider").stop().fadeIn();
+    }
+  }, function(){
+    $(this).stop().animate({"padding-left": "0px"}).css({"border-left":"0px solid rgb(6,170,226)"});  
+    $(".linkedin-slider, .github-slider, .youtube-slider, .facebook-slider").stop().fadeOut();
+  })
+
   // swap out projects title
   $(".hex").hover(function(){
     console.log($(this).css("border"));
@@ -162,33 +221,10 @@ $(document).ready(function(){
     $(this).children("svg").css({"stroke": "yellow"});
     $("#center-text").text(($(this).attr('name')));
   }, function(){
-    $(this).children("svg").css({"stroke-width": "0px"});
+    // $(this).children("svg").css({"stroke-width": "0px"});
+    $(this).children("svg").css({"stroke": "rgb(6,170,226)"});
     
   })
-
-  // Fade out project hexagons
-  function hideProjectHex(){
-  $(".hex-row-1_1").finish().finish().fadeOut();
-  $(".hex-row-2_1").finish().fadeOut();
-  $(".hex-row-2_2").finish().fadeOut();
-  $(".hex-row-2_3").finish().fadeOut();
-  $(".hex-row-2_4").finish().fadeOut();
-  $(".hex-row-2_5").finish().fadeOut();
-  $(".hex-row-2_6").finish().fadeOut();
-  $(".hex-row-3_1").finish().fadeOut();
-  $(".hex-row-3_2").finish().fadeOut();
-  $(".hex-row-3_3").finish().fadeOut();
-  $(".hex-row-3_4").finish().fadeOut();
-  $(".hex-row-3_5").finish().fadeOut();
-  $(".hex-row-3_6").finish().fadeOut();
-  $(".hex-row-3_7").finish().fadeOut();
-  $(".hex-row-3_8").finish().fadeOut();
-  $(".hex-row-3_9").finish().fadeOut();
-  $(".hex-row-3_10").finish().fadeOut();
-  $(".hex-row-3_11").finish().fadeOut();
-  $(".hex-row-3_12").finish().fadeOut();
-
-}
 
   // Smooth Scrolling
   // $('a[href*="#"]').on('click', function(e) {
@@ -211,9 +247,11 @@ $(document).ready(function(){
   }
   rand_color = randomColor();
 
-  $(".hex-fill").children().children().css({stroke: "#5fe5c9"});
+  // $(".hex-fill").children().children().css({stroke: "#5fe5c9"});
+  $(".hex-fill").children().children().css({stroke: "rgb(6,170,226)"});
   $(".hex-fill").children().children().css({"stroke-width": 1});
-  $(".hex-fill").children().children().css({"fill": "rgb(255, 255, 255, 0.55)"});
+  // $(".hex-fill").children().children().css({"fill": "rgb(95,229,201, 0.15)"});
+  $(".hex-fill").children().children().css({"fill": "rgb(6,170,226, 0.25)"});
   // $(".hex-fill").children().children().css({"fill": rgb(255, 255, 255, 0.5)});
   
   $(".hex-fill").hover(function(){
@@ -258,8 +296,8 @@ $(document).ready(function(){
             $(".reload").animate({opacity: 1}, 4500);
             
             // Center description box
-            $(".description-box").css({left: $(window).width()/2 - $(".description-box").width()/2});
-            $(".description-box").css({top: $(window).height()/2 - $(".description-box").height()/2});
+            // $(".description-box").css({left: $(window).width()/2 - $(".description-box").width()/2});
+            // $(".description-box").css({top: $(window).height()/2 - $(".description-box").height()/2});
 
             clickable = false;
         }

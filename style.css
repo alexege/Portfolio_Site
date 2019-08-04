@@ -1,15 +1,11 @@
 body{
     /* color:rgb(32, 170, 229); */
-    background: white;
+    background: black;
     overflow: hidden;
 } 
 
 h1 {
     font-family: vintage;
-}
-
-.top {
-    font-size: 26px;
 }
 
 .anagram {
@@ -26,67 +22,40 @@ h1 {
     z-index: 200;
 }
 
-.center-content-1 {
-    display: none;
-    position: absolute;
-    left: calc(50% - 184.2px);
-    top: 50%;
-}
-
-.center-content-1 a {
-    border-bottom: 2px solid black;
-    color: black;
-    padding: 5px;
-    background-color: transparent;
-    font-weight: bold;
-}
-
 .center-content {
     position: absolute;
     z-index: 1000;
     left: calc(50% - 184.2px);
     bottom: 5%;
-    background-color: rgb(255, 255, 255, 0.5);
+    /* background-color: rgb(6, 170, 226, 0.5); */
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0px 0px 20px white;
+    /* box-shadow: 0px 0px 20px rgb(6, 170, 226); */
 }
 
-.center-content a {
-    border-bottom: 2px solid black;
-    color: black;
+.center-content button {
+    border: 0px;
+    border-bottom: 2px solid rgb(6, 170, 226);
+    color: grey;
     padding: 5px;
     background-color: transparent;
     font-weight: bold;
 }
 
+button:focus, input[type="button"]:focus {
+    outline: none;
+}
+
 .page0, .page1, .page2, .page3, .page4, .page5 {
     height: 100vh;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    width: 100%;
 }
 .page0 {
     display: block;
-    background-color: white;
-}
-.page1 {
-    display: none;
-    background-color: cyan;
-    overflow: hidden;
-}
-.page2 {
-    display: none;
-    background-color: white;
-}
-.page3 {
-    display: none;
-    background-color: white;
-}
-.page4 {
-    display: none;
-    background-color: white;
-}
-.page5 {
-    display: none;
-    background-color: white;
+    /* background-color: white; */
 }
 
  .myVideo, .myVideo2, .myVideo3, .myVideo4, .myVideo5, .myVideo6 {
@@ -95,6 +64,109 @@ h1 {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+.about-contents {
+    text-align: center;
+    background-color: rgb(6,170,226, 0.75);
+    border: 2px solid rgb(6,170,226);
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    /* top: calc(50% - 211px); */
+    left: calc(50% - 230px);
+    z-index: 105;
+    /* color: #5fe5c9; */
+    color: white;
+}
+
+.media-links {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    z-index: 210;
+}
+
+.media-links span {
+    margin-left: 10px;
+}
+
+.media-links ul {
+    font-size: 24px;
+    color: white;
+    list-style-type: none;
+}
+
+.media-links ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.media-links ul i {
+    font-size: 30px;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.media-links i:hover {
+    /* color: rgb(6,170,226); */
+    list-style-type: none;
+    /* padding-left: 10px; */
+    /* border-left: 2px solid rgb(6,170,226); */
+}
+
+.media-links li:before {
+    content: "▹";
+    /* content: "\25B9"; */
+    position: absolute;
+    left: -18px;
+    color: red;
+    line-height: 25px;
+}
+
+.technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-contents {
+    min-width: 500px;
+    /* background-color: white;
+    border: 2px solid #5fe5c9;
+    border-radius: 4px;
+    padding: 15px; */
+    position: absolute;
+    top: calc(50% - 211px);
+    left: calc(50% - 230px);
+    z-index: 105;
+    color: black;
+}
+
+.work-contents {
+    min-width: 500px;
+    background-color: white;
+    border: 2px solid #5fe5c9;
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    top: calc(50% - 211px);
+    left: calc(50% - 230px);
+    z-index: 105;
+    color: black;
+}
+
+.description-box-CSharp, .description-box-mean, .description-box-webfunds, .description-box-python {
+    min-width: 500px;
+    background-color: white;
+    border: 8px solid red;
+    border-radius: 4px;
+    padding: 15px;
+    position: absolute;
+    top: calc(50% - 211px);
+    left: calc(50% - 230px);
+    z-index: 105;
+    color: black;
 }
 
 .content {
@@ -114,13 +186,15 @@ h1 {
     padding: 15px;
     position: absolute;
     /* left: 40%; */
-    top: 40%;
+    /* top: 40%; */
     z-index: 105;
     color: black;
 }
 
 .clip1, .clip2, .clip3, .clip4, .clip5 {
     width: 100%;
+    position: absolute;
+    z-index: -2;
 }
 
 
@@ -147,7 +221,8 @@ h1 {
     font-size: 100px;
     position:absolute;
     width: 100%;
-    top: 20%;
+    top: 10%;
+    z-index: 106;
 }
 
 .enter_button{
@@ -229,7 +304,6 @@ h1 {
     border: 1px solid #5fe5c9;
     padding: 10px;
     display: inline-block;
-    border-radius: 10px;
 }
 
 .hex-box {
@@ -283,9 +357,14 @@ h1 {
 
 .hex-box-enter {
     position: absolute;
-    left: calc(50% - 86px);
-    top: 88px;
-    margin: auto;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    z-index: 105;
+}
+
+.hex-box-enter svg {
+    width: 100px;
+    height: 100px;
 }
 
 .description-box {
@@ -302,12 +381,15 @@ h1 {
 .reload {
     position: absolute;
     left: calc(50% - 20px);
-    bottom: 80px;
+    bottom: 15%;
     opacity: 0;
+    border: 0px;
+    color: rgb(6, 170, 226);
+    background-color: transparent;
 }
 
 .hex-grid {
-    z-index: 101;
+    z-index: -1;
 }
 
 /* New hexagon */
