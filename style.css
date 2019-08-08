@@ -26,7 +26,7 @@ h1 {
     position: absolute;
     z-index: 1000;
     left: calc(50% - 184.2px);
-    bottom: 5%;
+    top: 0px;
     /* background-color: rgb(6, 170, 226, 0.5); */
     border-radius: 10px;
     padding: 10px;
@@ -34,12 +34,13 @@ h1 {
 }
 
 .center-content button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     border: 0px;
-    border-bottom: 2px solid rgb(6, 170, 226);
+    /* border-bottom: 2px solid rgb(6, 170, 226); */
     color: grey;
     padding: 5px;
     background-color: transparent;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 button:focus, input[type="button"]:focus {
@@ -68,12 +69,13 @@ button:focus, input[type="button"]:focus {
 
 .about-contents {
     text-align: center;
-    background-color: rgb(6,170,226, 0.75);
-    border: 2px solid rgb(6,170,226);
+    /* background-color: rgb(6,170,226, 0.75); */
+    /* border: 2px solid rgb(6,170,226); */
     border-radius: 4px;
     padding: 15px;
     position: absolute;
     /* top: calc(50% - 211px); */
+    top: 5rem;
     left: calc(50% - 230px);
     z-index: 105;
     /* color: #5fe5c9; */
@@ -130,6 +132,10 @@ button:focus, input[type="button"]:focus {
     flex-direction: row;
 }
 
+.technologies li {
+    text-align: left;
+}
+
 .project-contents {
     min-width: 500px;
     /* background-color: white;
@@ -145,21 +151,24 @@ button:focus, input[type="button"]:focus {
 
 .work-contents {
     min-width: 500px;
-    background-color: white;
-    border: 2px solid #5fe5c9;
+    background-color: black;
+    border: 2px solid rgb(6,170,226);
     border-radius: 4px;
     padding: 15px;
     position: absolute;
     top: calc(50% - 211px);
     left: calc(50% - 230px);
     z-index: 105;
-    color: black;
+    color: white;
+}
+
+.work-contents h1 {
+    color: #5fe5c9;
 }
 
 .description-box-CSharp, .description-box-mean, .description-box-webfunds, .description-box-python {
     min-width: 500px;
     background-color: white;
-    border: 8px solid red;
     border-radius: 4px;
     padding: 15px;
     position: absolute;
@@ -180,15 +189,15 @@ button:focus, input[type="button"]:focus {
 }
 
 .contents {
-    background-color: white;
-    border: 2px solid #5fe5c9;
+    background-color: black;
+    border: 2px solid rgb(6,170,226);
     border-radius: 4px;
     padding: 15px;
     position: absolute;
     /* left: 40%; */
     /* top: 40%; */
     z-index: 105;
-    color: black;
+    color: rgb(6,170,226);
 }
 
 .clip1, .clip2, .clip3, .clip4, .clip5 {

@@ -196,6 +196,11 @@ function switchToPage(page_num){
 
 $(document).ready(function(){
 
+  $("#ajax").click(function(){
+    $.ajax({url: "test-page.html", success: function(result){
+      $("#div1").html(result);
+    }});
+  });
 
   $(".linkedin-slider, .github-slider, .youtube-slider, .facebook-slider").hide();
   $(".trigger").hover(function(){
