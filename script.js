@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  console.log("Page finished loading");
+})
+
+
 // $(".hex-box-enter").css({top: $(window).height()/2 - $(".hex-box-enter").height()/2});
 // $(".hex-box-enter").css({left: $(window).width()/2 - $(".hex-box-enter").width()/2});
 // Randomly populate with hexagons
@@ -34,6 +39,10 @@ function loadContent(){
 
 
 function pageOneTransition(){
+
+  // $(".clip1").get(0).play();
+  // $(".clip1").delay(5000).fadeOut();
+
   $(".hex-grid").css({display: "block"});
   $(".hex-grid div").css({"opacity": "0"});
   $(".hex-box-enter").fadeOut();
@@ -194,11 +203,225 @@ function switchToPage(page_num){
 
 
 
+function moveSlices(){
+  for(var i = 0; i < 10; i++){
+    $(".slice1").append("<div class='slice22' style='color: white'>CONTENT</div>");
+  }
+  console.log("Moving slices");
+  $(".slice1").animate({})
+
+  $(".slice1").animate({"opacity" : "0"}, function(){
+    $(".slice3").animate({"opacity" : "0"}, function(){
+      $(".slice2").animate({"opacity" : "0"}, function(){
+        $(".slice4").animate({"opacity" : "0"});
+      })
+    })
+  });
+}
+
 $(document).ready(function(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Start of Buttons Matrix //
+
+//Create a matrix of buttons
+arr1 = [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+arr2=  [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+arr3 = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+arr4 = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+arr5 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+arr6 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr7 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+arr8 = [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+arr9 = [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+arr10=  [14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+arr11 = [15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+
+// arr1 = [10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10]
+// arr2= [9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9]
+// arr3 = [8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8]
+// arr4 = [7, 6, 5, 4, 3, 2, 3, 4, 5, 6, 7]
+// arr5 = [6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6]
+// arr6 = [5, 4, 3, 2, 1, 0, 1, 2, 3, 4, 5]
+// arr7 = [6, 5, 4, 3, 2, 1, 2, 3, 4, 5, 6]
+// arr8 = [7, 6, 5, 4, 3, 2, 3, 4, 5, 6, 7]
+// arr9 = [8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8]
+// arr10 = [9, 8, 7, 6, 5, 4, 5, 6, 7, 8, 9]
+// arr11 = [10, 9, 8, 7, 6, 5, 6, 7, 8, 9, 10]
+
+for(var i in arr1){
+  $(".row1").append(`<button class='${arr1[i]}'></button>`);
+}
+for(var i in arr2){
+  $(".row2").append(`<button class='${arr2[i]}'></button>`);
+}
+for(var i in arr3){
+  $(".row3").append(`<button class='${arr3[i]}'></button>`);
+}
+for(var i in arr4){
+  $(".row4").append(`<button class='${arr4[i]}'></button>`);
+}
+for(var i in arr5){
+  $(".row5").append(`<button class='${arr5[i]}'></button>`);
+}
+for(var i in arr6){
+  $(".row6").append(`<button class='${arr6[i]}'></button>`);
+}
+for(var i in arr7){
+  $(".row7").append(`<button class='${arr7[i]}'></button>`);
+}
+for(var i in arr8){
+  $(".row8").append(`<button class='${arr8[i]}'></button>`);
+}
+for(var i in arr9){
+  $(".row9").append(`<button class='${arr9[i]}'></button>`);
+}
+for(var i in arr10){
+  $(".row10").append(`<button class='${arr10[i]}'></button>`);
+}
+for(var i in arr11){
+  $(".row11").append(`<button class='${arr11[i]}'></button>`);
+}
+
+const speed = 250;
+const prev_height = 100;
+const prev_width = 100;
+const new_height = 120;
+const new_width = 120;
+
+var a1 = {height:new_height, width: new_width};
+var a2 = {height:prev_height, width: prev_width};
+
+$(document).ready(function(){
+
+$(".enterButton").click(function(){
+  console.log("Testing");
+  $(".0").click();
+  $(".enterButton").remove();
+  setTimeout(function(){
+    pageTwoTransition()
+  }, 5000);
+
+});
+
+// Random color border:
+function randomColor(){
+var colors = ['#ff0000', '#00ff00', '#0000ff'];
+var random_color = colors[Math.floor(Math.random() * colors.length)];
+var random_color1 = colors[Math.floor(Math.random() * colors.length)];
+var random_color2 = colors[Math.floor(Math.random() * colors.length)];
+var random_color3 = colors[Math.floor(Math.random() * colors.length)];
+var random_color4 = colors[Math.floor(Math.random() * colors.length)];
+var random_color5 = colors[Math.floor(Math.random() * colors.length)];
+var random_color6 = colors[Math.floor(Math.random() * colors.length)];
+var random_color7 = colors[Math.floor(Math.random() * colors.length)];
+var random_color8 = colors[Math.floor(Math.random() * colors.length)];
+var random_color9 = colors[Math.floor(Math.random() * colors.length)];
+var random_color10 = colors[Math.floor(Math.random() * colors.length)];
+var random_color11 = colors[Math.floor(Math.random() * colors.length)];
+
+$(".0").css('border', `2px solid ${random_color1}`);
+$(".1").css('border', `2px solid ${random_color2}`);
+$(".2").css('border', `2px solid ${random_color3}`);
+$(".3").css('border', `2px solid ${random_color4}`);
+$(".4").css('border', `2px solid ${random_color5}`);
+$(".5").css('border', `2px solid ${random_color6}`);
+$(".6").css('border', `2px solid ${random_color7}`);
+$(".7").css('border', `2px solid ${random_color8}`);
+$(".8").css('border', `2px solid ${random_color9}`);
+$(".9").css('border', `2px solid ${random_color10}`);
+$(".10").css('border', `2px solid ${random_color11}`);
+$(".11").css('border', `2px solid ${random_color}`);
+$(".12").css('border', `2px solid ${random_color}`);
+$(".13").css('border', `2px solid ${random_color}`);
+$(".14").css('border', `2px solid ${random_color}`);
+$(".15").css('border', `2px solid ${random_color}`);
+}
+
+// $(".0").css({"border": "1px solid red"}).html("Enter").css({"color" : "white"});
+// $(".0").html("Enter").width(60).height(60);
+
+  $("button").hover(function(){
+    if($(this).is(".ignore")){
+
+    } else {
+      $(this).css({border: "2px solid white"});
+      $(this).css({opacity: 1});
+      // $(this).animate({margin: '5px'});
+      // $(this).animate({width: 70, height: 70});
+      // $(this).delay(500).animate({width: 100, height: 100});
+    }
+  }, function(){
+    if($(this).is(".ignore")){
+      console.log("Ignored");
+    } else {
+      $(this).animate({opacity: 0}, 1000);
+      console.log("Triggered");
+    }
+      // $(this).css({border: "2px solid black"});
+      // $(this).animate({margin: '0px'});
+      // $(this).animate({width: 55, height: 55});
+  })
+
+  $("button").click(function(){
+      var currentButton = parseInt($(this).attr('class'));
+      console.log("starting: ", currentButton);
+      var random_color = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+      $(`.${currentButton}`).animate({"margin": "0 10px 0 10px", opacity: 0.25}, 500);
+      $(`.${currentButton}`).animate({margin: 0, opacity: 1.0 }, 500);
+      $(`.${currentButton}`).css({border: `2px solid ${random_color}`});
+      // $(`.${currentButton}`).css({"box-shadow": `2px 22px ${random_color}`});
+      // randomColor();           
+      while(currentButton < 15){
+      $(`.${currentButton + 1}`).delay(200 * currentButton/2).animate({margin: "0 10px 0 10px", opacity: 0.25}, 500);
+      $(`.${currentButton + 1}`).delay(200 * currentButton/2).animate({margin: 0, opacity: 1.0 }, 500);
+      $(`.${currentButton + 1}`).css({border: `2px solid ${random_color}`});
+      // $(`.${currentButton}`).css({"box-shadow": `2px 22px ${random_color}`});
+      currentButton += 1;
+      // randomColor();
+      }
+  })
+});
+
+// End of Buttons Matrix //
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+  $(".clip1").get(0).play();
+  $(".clip1").delay(5000).fadeOut();
+  $(".enterButton").hide().delay(5600).fadeIn();
+  $(".center-content").hide().delay(6000).fadeIn();
+  $(".media-links").hide().delay(6300).fadeIn();
+
+  $(function () {
+    var $element = $('.enterButton');
+    setInterval(function () {
+        $element.fadeIn(2000, function () {
+            $element.fadeOut(2000, function () {
+                $element.fadeIn(2000)
+            });
+        });
+    }, 5000);
+});
 
   $("#ajax").click(function(){
     $.ajax({url: "test-page.html", success: function(result){
-      $("#div1").html(result);
+      $("#main_content").html(result);
     }});
   });
 
@@ -216,7 +439,7 @@ $(document).ready(function(){
     }
   }, function(){
     $(this).stop().animate({"padding-left": "0px"}).css({"border-left":"0px solid rgb(6,170,226)"});  
-    $(".linkedin-slider, .github-slider, .youtube-slider, .facebook-slider").stop().fadeOut();
+    $(".linkedin-slider, .github-slider, .youtube-slider, .facebook-slider").fadeOut();
   })
 
   // swap out projects title
@@ -278,11 +501,11 @@ $(document).ready(function(){
         if(clickable){
 
             // Change contents of description box
-            if($(this).attr('name') == 'python'){
+            if($(this).attr('name') == 'Python'){
                 $(".description-box").html($(".description-box-python").html())
-            } else if($(this).attr('name') == 'mean'){
+            } else if($(this).attr('name') == 'Mean'){
                 $(".description-box").html($(".description-box-mean").html())
-            } else if($(this).attr('name') == 'webfunds'){
+            } else if($(this).attr('name') == 'Webfunds'){
                 $(".description-box").html($(".description-box-webfunds").html())
             } else if($(this).attr('name') == 'C#'){
               $(".description-box").html($(".description-box-CSharp").html())
