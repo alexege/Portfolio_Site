@@ -202,6 +202,61 @@ function switchToPage(page_num){
 }
 
 
+function moveSlice(){
+  console.log("Moving ");
+  $(".slice_5").animate({"top": "100vh"});
+  $(".slice_6").animate({"bottom": "100vh"}, function(){
+    $(".slice_4").animate({"top": "100vh"});
+    $(".slice_7").animate({"bottom": "100vh"}, function(){
+      $(".slice_3").animate({"top": "100vh"});
+      $(".slice_8").animate({"bottom": "100vh"}, function(){
+        $(".slice_2").animate({"top": "100vh"});
+        $(".slice_9").animate({"bottom": "100vh"}, function(){
+          $(".slice_1").animate({"top": "100vh"});
+          $(".slice_10").animate({"bottom": "100vh"}, function(){
+        
+          });
+        });
+      });
+    });
+  });
+  // $(".slice_5", ".slice_6").animate({"top": "100vh", "opacity" : "0"}, function(){
+  //   $(".slice_4", ".slice_7").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+  //     $(".slice_3", ".slice_8").animate({"top": "100vh", "opacity" : "0"}, function(){
+  //       $(".slice_2", ".slice_9").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+  //         $(".slice_1", ".slice_10").animate({"top": "100vh", "opacity" : "0"}, function(){
+  //         });
+  //       });
+  //     });
+  //   });
+  // });
+}
+
+// function moveSlice(){
+//   console.log("Moving ");
+//   $(".slice_1").animate({"top": "100vh", "opacity" : "0"}, function(){
+//     $(".slice_2").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+//       $(".slice_3").animate({"top": "100vh", "opacity" : "0"}, function(){
+//         $(".slice_4").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+//           $(".slice_5").animate({"top": "100vh", "opacity" : "0"}, function(){
+//             $(".slice_6").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+//               $(".slice_7").animate({"top": "100vh", "opacity" : "0"}, function(){
+//                 $(".slice_8").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+//                   $(".slice_9").animate({"top": "100vh", "opacity" : "0"}, function(){
+//                     $(".slice_10").animate({"bottom": "100vh", "opacity" : "0"}, function(){
+//                     });
+//                   });
+//                 });
+//               });
+//             });
+//           });
+//         });
+//       });
+//     });
+//   });
+// }
+
+
 
 function moveSlices(){
   for(var i = 0; i < 10; i++){
@@ -220,18 +275,6 @@ function moveSlices(){
 }
 
 $(document).ready(function(){
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -420,7 +463,7 @@ $(".15").css('border', `2px solid ${random_color}`);
 });
 
   $("#ajax").click(function(){
-    $.ajax({url: "test-page.html", success: function(result){
+    $.ajax({url: "content.html", success: function(result){
       $("#main_content").html(result);
     }});
   });

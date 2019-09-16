@@ -1074,3 +1074,96 @@ button {
     height: 25%;
     background-color: red;
 }
+
+
+
+
+
+.slice_1 {
+    position: absolute;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_2 {
+    position: absolute;
+    left: 10vw;
+    z-index: 9999;
+    background-color: white;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_3 {
+    position: absolute;
+    left: 20vw;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_4 {
+    position: absolute;
+    left: 30vw;
+    z-index: 9999;
+    background-color: white;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_5 {
+    position: absolute;
+    left: 40vw;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_6 {
+    position: absolute;
+    left: 50vw;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_7 {
+    position: absolute;
+    left: 60vw;
+    z-index: 9999;
+    background-color: white;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_8 {
+    position: absolute;
+    left: 70vw;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_9 {
+    position: absolute;
+    left: 80vw;
+    z-index: 9999;
+    background-color: white;
+    width: 10vw;
+    height: 100vh;
+}
+
+.slice_10 {
+    position: absolute;
+    left: 90vw;
+    z-index: 9999;
+    background-color: #06aae2;
+    width: 10vw;
+    height: 100vh;
+}
